@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplos de uso para el boxModel</title>
+
+    <style>
+        
+        #Ejemplo01{
+               /* width: 200px;
+               height: 200px; */
+
+               max-width: 300px;
+               min-width: 200px;
+
+               max-height: 300px;
+               min-height: 200px;
+
+               /* Padding */
+               padding-top: 20px;
+               padding-left: 30px;
+               padding-right: 50px;
+               padding-bottom: 20px;
+               
+               padding: 50px; /* Aplica en los cuatro lados */
+               padding: 80px 60px 20px 35px; /* Aplica a cada lado en  sentido a las agujas del reloj */
+
+               border: 10px solid rgba(46, 190, 66, 0.658);/* Aplica en los cuatro lados */
+               border-radius: 30%;/* Bordes redondeados */
+
+               /* // Aplica en los cuatro lados */
+               /* margin: 50px;  */
+               /* // Aplica a cada lado en  sentido a las agujas del reloj  */
+               margin: 50px 90px 20px 35px;
+               
+
+               /* margin: auto; */
+               /* SOMBRAS CSS */
+               box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.70);
+          }
+
+          #Ejemplo02{
+               /* width: 200px;
+               height: 200px; */
+
+               max-width: 300px;
+               min-width: 200px;
+
+               max-height: 300px;
+               min-height: 200px;
+
+               /* Padding */
+               padding-top: 20px;
+               padding-left: 30px;
+               padding-right: 50px;
+               padding-bottom: 20px;
+               
+               padding: 50px; /* Aplica en los cuatro lados */
+               padding: 80px 60px 20px 35px; /* Aplica a cada lado en  sentido a las agujas del reloj */
+
+               border: 10px double rgba(46, 84, 190, 0.658);/* Aplica en los cuatro lados */
+               border-radius: 10%;/* Bordes redondeados */
+
+               /* // Aplica en los cuatro lados */
+               /* margin: 50px;  */
+               /* // Aplica a cada lado en  sentido a las agujas del reloj  */
+               margin: 50px 90px 20px 35px;
+               
+
+               /* margin: auto; */
+               /* SOMBRAS CSS */
+               box-shadow: 10px 10px 10px 10px gray
+          }
+          
+          #Ejemplo-Desbordamiento03{
+               /* width: 200px;
+               height: 200px; */
+
+               max-width: 300px;
+               min-width: 200px;
+
+               max-height: 300px;
+               min-height: 200px;
+
+               /* Padding */
+               padding-top: 20px;
+               padding-left: 30px;
+               padding-right: 50px;
+               padding-bottom: 20px;
+               
+               padding: 50px; /* Aplica en los cuatro lados */
+               padding: 80px 60px 20px 35px; /* Aplica a cada lado en  sentido a las agujas del reloj */
+
+               border: 10px dashed rgba(190, 46, 65, 0.658);/* Aplica en los cuatro lados */
+               border-radius: 10%;/* Bordes redondeados */
+
+               /* // Aplica en los cuatro lados */
+               /* margin: 50px;  */
+               /* // Aplica a cada lado en  sentido a las agujas del reloj  */
+               margin: 50px 90px 20px 35px;
+               
+               /* margin: auto; */
+               /* SOMBRAS CSS */
+               box-shadow: 10px 10px 10px 10px gray;
+
+               background-color: #ffdb39;
+
+               /* DESBORDAMIENTO 
+                    - auto: aparecerá la barra de scroll cuando lo necesite
+                    -scroll: siempre tendra la barra de scroll
+                    -visible: se podrá observar el desbordamiento
+                    -hidden: no se mostrará el desbordamiento
+               */
+               overflow: auto;
+          }
+
+          
+          #EjemploDespliegue{
+               /* width: 200px;
+               height: 200px; */
+
+               max-width: 300px;
+               min-width: 200px;
+
+               max-height: 300px;
+               min-height: 200px;
+
+               /* Padding */
+               /* padding-top: 20px;
+               padding-left: 30px;
+               padding-right: 50px;
+               padding-bottom: 20px; */
+               
+                /*  padding: 10px;Aplica en los cuatro lados */
+               padding: 25px 80px 25px 35px; /* Aplica a cada lado en  sentido a las agujas del reloj */
+
+               border: 10px dashed rgba(190, 46, 65, 0.658);/* Aplica en los cuatro lados */
+               border-radius: 10%;/* Bordes redondeados */
+
+               /* // Aplica en los cuatro lados */
+               /* margin: 50px;  */
+               /* // Aplica a cada lado en  sentido a las agujas del reloj  */
+               margin: 50px 90px 20px 35px;
+               
+               /* margin: auto; */
+               /* SOMBRAS CSS */
+               box-shadow: 10px 10px 10px 10px black;
+
+               background-color: darkkhaki;
+
+               column-count: 3;
+               column-gap: 1px;
+               column-rule: 5px solid lightpink;
+               overflow: hidden;
+
+          }
+          
+          #Ejemplo-Background01{
+               /* width: 200px;
+               height: 200px; */
+
+               max-width: 300px;
+               min-width: 200px;
+
+               max-height: 300px;
+               min-height: 200px;
+
+               border: 10px dotted yellow;/* Aplica en los cuatro lados */
+               border-radius: 10%;/* Bordes redondeados */
+
+               margin: 50px 90px 20px 35px;
+               
+               /* margin: auto; */
+               /* SOMBRAS CSS */
+               box-shadow: 10px 10px 10px 10px gray;
+
+               background: linear-gradient(90deg, blue, orange);
+
+          }
+
+          #Ejemplo-Background02{
+               /* width: 200px;
+               height: 200px; */
+
+               max-width: 300px;
+               min-width: 200px;
+
+               max-height: 300px;
+               min-height: 200px;
+
+               border: 10px dotted cornflowerblue;/* Aplica en los cuatro lados */
+               border-radius: 10%;/* Bordes redondeados */
+
+               margin: 50px 90px 20px 35px;
+               
+               /* margin: auto; */
+               /* SOMBRAS CSS */
+               box-shadow: 10px 10px 10px 10px gray;
+
+               background: radial-gradient(orange, blue);
+
+          }
+
+          #Ejemplo-BackgroundImagen{
+               width: 1500px;
+               height: 1500px;
+
+               /* max-width: 300px;
+               min-width: 200px;
+
+               max-height: 300px;
+               min-height: 200px; */
+
+               border: 10px dotted cornflowerblue;/* Aplica en los cuatro lados */
+               border-radius: 10%;/* Bordes redondeados */
+
+               margin: 50px 90px 20px 35px;
+               
+               /* margin: auto; */
+               /* SOMBRAS CSS */
+               box-shadow: 10px 10px 10px 10px gray;
+
+               background-image: url(../imagenes/pawPatrol/canine_patrol_paw_patrol_logo_icon_263850.png);
+               background-repeat:no-repeat;
+               background-position: center;
+          }
+
+          h1, h2, h3, h4 {
+               /* SOMBRAS EN TEXTO */
+               text-shadow: 10px 10px 5px gray;
+               text-align: center;
+          }
+    </style>
+</head>
+<body>
+    
+    <article>
+        
+        <a href="../index.html">Regreso a la Pagina principal</a>
+
+        <h1>Ejemplos de sombras en Cajas y Texto</h1>
+        <div id="Ejemplo01">
+             Ejemplo01: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat!
+        </div>
+
+        <h2>Ejemplos de sombras en Cajas y Texto</h2>
+        <div id="Ejemplo02">
+             Ejemplo02: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat!
+        </div>
+
+        <section>
+            <h1>Despordamiento</h1>
+             <div id="Ejemplo-Desbordamiento03">
+                  Ejemplo-Desbordamiento03: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat!<br>
+                  Ejemplo-Desbordamiento03: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat!<br>
+                  Ejemplo-Desbordamiento03: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat!<br>
+             </div>
+
+             <h2>Despliegue</h2>
+             <div id="EjemploDespliegue">
+                  Ejemplo Despliegue: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat! Ejemplo Despliegue: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat! Ejemplo Despliegue: Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt laborum commodi in quos inventore nihil culpa minus ad, maiores consequatur. Quo voluptates, dolores assumenda labore animi esse odio eveniet repellat!
+             </div>
+
+            <h3>Background linear-gradient</h3>
+             <div id="Ejemplo-Background01">
+
+             </div>
+
+             <h3>Background radial-gradient</h3>
+             <div id="Ejemplo-Background02">
+
+             </div>
+
+             <h3>Background imagen</h3>
+             <div id="Ejemplo-BackgroundImagen">
+
+             </div>
+        </section>
+   </article>
+
+   <footer>
+
+   </footer>
+</body>
+</html>
