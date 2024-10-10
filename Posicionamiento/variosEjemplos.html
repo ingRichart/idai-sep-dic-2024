@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Ejemplos de uso para el Posicionamiento en CSS</title>
+
+     <style>
+          h1,
+          h2,
+          h3,
+          h4 {
+               /* SOMBRAS EN TEXTO */
+               text-shadow: 10px 10px 5px gray;
+               text-align: center;
+          }
+
+          article{
+               border: 1px solid red;
+               margin-bottom: 100px;
+               
+          }
+
+          div{
+               width: 200px;
+               height: 200px;
+               margin: 10px;
+               border: 1px solid blue;
+               line-height: 200px;
+               text-align: center;
+
+               background-repeat:no-repeat;
+               background-position: center;
+               background-size: cover;
+          }
+
+          .jmj2025{
+               background-image: url(imgLogos/cq5dam-thumbnail-cropped-1500-844.jpg);
+          }
+
+          .jmj2023{
+               background-image: url(imgLogos/cq5dam.web.1280.1280.png);
+          }
+
+          .jmj2019{
+               background-image: url(imgLogos/logo-jmj-panama2019.jpg);
+          }
+
+          .jmj2016{
+               background-image: url(imgLogos/jmj-cracovia_20160725185400718084.png);
+          }
+
+          .juanBosco{
+               background-image: url(imgSantos/SanJuanBosco.png);
+          }
+
+          .juanPablo2{
+               background-image: url(imgSantos/SanJuanPabloII.png);
+          }
+
+          .vicente{
+               background-image: url(imgSantos/SanVicente.png);
+          }
+
+          .pierGiorgio{
+               background-image: url(imgSantos/BeatoPierGiorgioFrassati.png);
+          }
+
+          .marce{
+               background-image: url(imgSantos/BeatoMarcelCallo.png);
+          }
+
+          .chiara{
+               background-image: url(imgSantos/BeatoChiaraBadano.png);
+          }
+
+          .carlos{
+               background-image: url(imgSantos/BeatoCarlosAcutis.png);
+          }
+
+          /*DESPLIEGUE EN BLOQUE*/
+          .bloque div{						
+               display: block;
+		}
+
+          /*DESPLIEGUE EN LINEA*/
+          .enlinea div{
+               display: inline;
+               display: inline-block;
+		}
+
+          /*DESPLIEGUE EN TABLA*/
+		.entable div{
+               display: table-cell;
+		}
+
+          /*POSICIONAMIENTO RELATIVO*/
+		#relativo{
+               position: relative;
+               left: 300px;
+		}
+
+		/*POSICIONAMIENTO ABSOLUTO*/
+		#absoluto{
+               position: absolute;
+               right: 50px;
+		}
+
+		/*POSICIONAMIENTO FIJO*/
+		#fijo{
+               /* position: fixed; */
+               right: 100px;
+               top: 200px;
+		}
+
+		/*POSICIONAMIENTO FLOTANTE*/
+          .flotante{
+               height: 400px;
+               width: 100%;
+          }
+          
+          .flotante div:nth-child(even){
+               float: left;
+          }
+
+          .flotante div:nth-child(odd){
+               float: right;
+          }
+
+
+</style>
+</head>
+
+<body>
+     <a href="../index.html">Regreso a la Pagina principal</a>
+     <h1>ELEMENTOS EN BLOQUE</h1>
+     <article class="bloque">
+          <div class="jmj2016">UNO</div>
+          <div class="jmj2019">DOS</div>
+          <div class="jmj2023">TRES</div>
+          <div class="jmj2025">CUATRO</div>
+     </article>
+
+     <h1>ELEMENTOS EN LÍNEA</h1>
+     <article class="enlinea">
+          <div class="jmj2016">UNO</div>
+          <div class="jmj2019">DOS</div>
+          <div class="jmj2023">TRES</div>
+          <div class="jmj2025">CUATRO</div>
+     </article>
+
+     <h1>ELEMENTOS EN TABLA</h1>
+     <article class="entable">
+          <div class="jmj2016">UNO</div>
+          <div class="jmj2019">DOS</div>
+          <div class="jmj2023">TRES</div>
+          <div class="jmj2025">CUATRO</div>
+     </article>
+
+     
+     <h1>ELEMENTOS EN TABLA</h1>
+     <article class="entable">
+          <div class="jmj2016">UNO</div>
+          <div class="jmj2019">DOS</div>
+          <div class="jmj2023">TRES</div>
+          <div class="jmj2025">CUATRO</div>
+     </article>
+
+     
+     <h1>POSICIONAMIENTO</h1>
+     <article class="posicionamiento">
+          <div class= "juanBosco" id="relativo">RELATIVO</div>
+          <div class= "juanPablo2" id="absoluto">ABSOLUTO</div>
+          <div class= "vicente" id="fijo">FIJO</div>	
+     </article>
+
+     <h1>POSICIONAMIENTO FLOTANTE</h1>
+     <article class="flotante">
+          <div class= "carlos">PRIMER</div>
+          <div class= "chiara">SEGUNDO</div>
+          <div class= "marce">TERCERO</div>	
+          <div class= "pierGiorgio">CUARTO</div>
+          <div class= "vicente">QUINTO</div>
+          <div class= "juanBosco">SEXTO</div>	
+          <div class= "juanPablo2">SEPTIMO</div>	
+     </article>
+
+     <footer>
+
+     </footer>
+</body>
+
+</html>
