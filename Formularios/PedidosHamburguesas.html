@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ricky's Hamburgues</title>
+</head>
+<body>
+
+    <header>
+
+        <table>
+            <tbody>
+                <tr>
+                    <td>
+                        <img src="../imagenes/hdm.jpg" alt="Logo Hamburguesas">
+                    </td>
+                    <td>
+                        <h1>Ricky's Hammbuerges</h1>
+                        <hr>
+                        <br>
+                        <br>
+                        <span>Calle Dr Julián Villarreal 237 Sur, Centro, 64000 Monterrey, N.L.</span>
+                        <b>+528183444232</b>
+                    </td>
+                    <td>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14382.339331880767!2d-100.33856315215063!3d25.685053751881203!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8662bfd5b0e43079%3A0xbf16a84f47bb626c!2sHamburguesas%20Don%20Martin!5e0!3m2!1ses-419!2smx!4v1729094334118!5m2!1ses-419!2smx" width="200" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </header>
+    <article>
+        <form action="PedidosHamburguesas.html">
+            <table>
+                <thead>
+                    <tr>
+                        <th colspan="2">Seleccionar</th>
+                        <th colspan="2">Descripción</th>
+                        <th>Cantidad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            
+                            <input type="radio" name="TipoHamburguesa" id="rbHamSencilla" value="HamSencilla">
+                            <label for="rbHamSencilla">Hamburguesa Sencilla</label>
+                            <br>
+                            <input type="radio" name="TipoHamburguesa" id="rbHamSpecial" value="HamSpecial">
+                            <label for="rbHamSpecial">Hamburguesa Especial</label>
+                            <br>
+                            <input type="radio" name="TipoHamburguesa" id="rbHamDoble" value="HamDoble">
+                            <label for="rbHamDoble">Hamburguesa Doble</label>
+                            <br>
+                            <input type="radio" name="TipoHamburguesa" id="rbHamSuprem" value="HamSuprem">
+                            <label for="rbHamSuprem">Hamburguesa Suprema</label>
+                            <br>
+                        </td>
+                        <td>
+                            <input type="radio" name="TipoCarne" id="rbCarneEspecial" value="CarneEspecial">
+                            <label for="rbCarneEspecial">Carne Especial</label>
+                            <br>
+                            <input type="radio" name="TipoCarne" id="rbCarneAngus" value="CarneAngus">
+                            <label for="rbCarneAngus">Carne Angus</label>
+                            <br>
+                            <input type="radio" name="TipoCarne" id="rbCarnePollo" value="CarnePollo">
+                            <label for="rbCarnePollo">Carne Pollo</label>
+                            <br>
+                            <input type="radio" name="TipoCarne" id="rbCarneRoastBeef" value="CarneRoastBeef">
+                            <label for="rbCarneRoastBeef">Carne Roast Beef</label>
+                            <br>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="chkTomate" id="chkTomate" value="chkTomate">
+                            <label for="chkTomate">Tomate</label>
+                            <br>
+                            <input type="checkbox" name="chkCebolla" id="chkCebolla" value="chkCebolla">
+                            <label for="chkCebolla">Cebolla</label>
+                            <br>
+                            <input type="checkbox" name="chkQuesoAmarillo" id="chkQuesoAmarillo" value="chkQuesoAmarillo">
+                            <label for="chkQuesoAmarillo">Queso Amarillo</label>
+                            <br>
+                            <input type="checkbox" name="chkJamon" id="chkJamon" value="chkJamon">
+                            <label for="chkJamon">Jamón</label>
+                        </td>
+                        <td>
+                            <input type="checkbox" name="chkCebollaMorada" id="chkCebollaMorada" value="chkCebollaMorada">
+                            <label for="chkCebollaMorada">Cebolla Morada</label>
+                            <br>
+                            <input type="checkbox" name="chkQuesoGouda" id="chkQuesoGouda" value="chkQuesoGouda">
+                            <label for="chkQuesoGouda">Queso Gouda</label>
+                            <br>
+                            <input type="checkbox" name="chkPina" id="chkPina" value="chkPina">
+                            <label for="chkPina">Piña</label>
+                            <br>
+                            <input type="checkbox" name="chkChampiñones" id="chkChampiñones" value="chkChampiñones">
+                            <label for="chkChampiñones">Champiñones</label>
+                        </td>
+                        <td>
+                            <input type="number" name="cantidadHamburguesas" id="cantidadHamburguesas" placeholder="Cantidad de Hamburguesas">
+                            <br>
+                            <input type="text" name="clienteNombre" id="clienteNombre" placeholder="Nombre completo">
+                            <br>
+                            <select name="consumo" id="consumo" >
+                                <option value="1">En el local</option>
+                                <option value="2">Pick up</option>
+                                <option value="3">Entrega a Domicilio</option>
+                            </select>
+                            <br>
+                            <input type="text" name="dataList" id="dataList" list="dataconsumo">
+                            <datalist id="dataconsumo">
+                                <option value="1">En el local</option>
+                                <option value="2">Pick up</option>
+                                <option value="3">Entrega a Domicilio</option>
+                            </datalist>
+
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot></tfoot>
+            </table>
+
+            <button type="submit">Calcular el pedido</button>
+        </form>
+    </article>
+    
+</body>
+</html>
