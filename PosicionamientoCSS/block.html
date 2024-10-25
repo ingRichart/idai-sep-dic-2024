@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posicionamientos CSS</title>
+
+    <style>
+
+        article{
+            border: 1px solid red;
+            margin-bottom: 100px;
+        }
+
+        div{
+            width: 200px;
+            height: 200px;
+            margin: 10px;
+            border: 1px solid blue;
+            text-align: center;
+            line-height: 200px;
+        }
+
+        .bloque div{
+            display: block;
+        }
+
+        .enlinea div{
+            display: inline-block;
+        }
+
+        .entable div{
+            display: table-cell;
+        }
+
+        #relativo{
+            position: relative;
+            left: 300px;
+        }
+
+        #absoluto{
+            position: absolute;
+            right: 50px;
+        }
+
+        #fijo{
+            position:fixed;
+            background: yellow;
+            right: 50px;
+            top: 100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>ELEMENTOS EN BLOQUE</h1>
+    <article class="bloque">
+        <div>UNO</div>
+        <div>DOS</div>
+        <div>TRES</div>
+        <div>CUATRO</div>
+    </article>
+
+    <h1>ELEMENTOS EN LINEA</h1>
+    <article class="enlinea">
+        <div>UNO</div>
+        <div>DOS</div>
+        <div>TRES</div>
+        <div>CUATRO</div>
+    </article>
+
+    <h1>ELEMENTOS EN TABLA</h1>
+    <article class="entable">
+        <div>UNO</div>
+        <div>DOS</div>
+        <div>TRES</div>
+        <div>CUATRO</div>
+    </article>
+
+    <article>
+        <div id="relativo">RELATIVO</div>
+        <div id="absoluto">ABSOLUTO</div>
+        <div id="fijo">FIJO</div>
+    </article>
+</body>
+</html>
