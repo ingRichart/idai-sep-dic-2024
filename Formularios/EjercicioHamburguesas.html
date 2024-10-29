@@ -8,7 +8,7 @@
 </head>
 
 <body>
-    <form action="">
+    <form id="formulario" action="">
         <table>
             <thead>
                 <tr>
@@ -19,7 +19,7 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
+                    <td class="opcionesDeHamburguesa">
                         <input type="radio" name="tipoHamburguesa" id="radioHambSencilla" value="hambSencilla">
                         <label for="radioHambSencilla">Hamburguesa Sencilla 35.00 MXN</label>
                         <br>
@@ -32,7 +32,7 @@
                         <input type="radio" name="tipoHamburguesa" id="radioHambSuprema" value="hambSuprema">
                         <label for="radioHambSuprema">Hamburguesa Suprema 90.00 MXN</label>
                     </td>
-                    <td>
+                    <td class="opcionesDeHamburguesa">
                         <input type="radio" name="tipoCarne" id="radioCarneEspecial" value="carneEspecial">
                         <label for="radioCarneEspecial">Tradicional Especial</label>
                         <br>
@@ -64,7 +64,7 @@
                         <input type="checkbox" name="IngredientAguacate" id="checkBoxAguacate" value="Aguacate">
                         <label for="checkBoxAguacate">Aguacate</label>
                     </td>
-                    <td>
+                    <td class="opcionesDeHamburguesa">
                         <input type="checkbox" name="IngredientCebollaMorada" id="checkBoxCebollaMorada"
                             value="CebollaMorada">
                         <label for="checkBoxCebollaMorada">Cebolla Morada</label>
@@ -103,10 +103,80 @@
             </tbody>
             <tfoot></tfoot>
         </table>
-
-        <input type="submit" value="Enviar Datos">
+<!-- 
+        <input type="submit" value="Enviar Datos"> -->
         <button type="submit">Guardar</button>
     </form>
 </body>
+
+<script>
+
+    var tabla = document.getElementsByTagName("table");
+    var registros = document.getElementsByTagName("tr");
+    var inputs = document.getElementsByTagName("input");
+
+    var radio = document.getElementById("radioHambSencilla");
+
+    var radio2 = document.getElementById("radioHambEspecial");
+
+
+    var classHamburguesa = document.getElementsByClassName("tipoHamburguesa");
+
+    // 1.- Crear el elemento nuevo para mi HTML
+    var nuevo = document.createElement("input");
+
+    // 2.- Crear el contenido de mi elemento.
+    var contenido = document.createTextNode("Hamburgues Doble Suprema 120 MXN");
+
+    //3. Agregar el contenido al nuevo elemento
+    nuevo.appendChild(contenido);
+
+    //4. Agregar la nueva ocpion del elemento a mi HTML
+    var opciones = document.getElementsByClassName("opcionesDeHamburguesa");
+
+    opciones[0].appendChild(nuevo);
+
+    /*
+     type="radio" name="tipoHamburguesa" id="radioHambSencilla" value="hambSencilla"
+    */
+    nuevo.setAttribute("type","radio");
+    nuevo.setAttribute("value","hambDobleEspecial");
+    nuevo.setAttribute("id","radiohambDobleEspecial");
+    nuevo.setAttribute("name","tipoHamburguesa");
+    
+    labelNuevo = document.createElement("label");
+    contenidolabel = document.createTextNode("Hamburgues Doble Suprema ");
+    labelNuevo.appendChild(contenidolabel);
+    opciones[0].appendChild(labelNuevo);
+
+
+    var f = document.getElementById("formulario");
+
+    //palabra reservada es: function
+    // seguido del nombre de nombre de la funcion entre parentesis.
+    //los parametros, que en este caso es la variable "e" puede ser opcional
+    function calcular(e){
+        var total = 0.0;
+        if (f.tipoHamburguesa.value == "hambSencilla") {
+            total = 49.99;
+        }
+        else if (f.tipoHamburguesa.value == "hambEspecial") {
+            total = 99.99;
+        }
+        else if (f.tipoHamburguesa.value == "hambDoble") {
+            total = 149.99;
+        }
+        else {
+            total = 199.99;
+        }
+        
+        alert("Total a pagar es de: " + total);
+    }
+
+
+    //Se agrega la funcion realizada al formulario con la instruccion addEventListener
+    f.addEventListener("submit", calcular);
+
+</script>
 
 </html>
