@@ -31,7 +31,7 @@
         </table>
     </header>
     <article>
-        <form action="PedidosHamburguesas.html">
+        <form id="formularioHamburguesa" name="formularioHamburguesa">
             <table>
                 <thead>
                     <tr>
@@ -121,9 +121,45 @@
                 <tfoot></tfoot>
             </table>
 
-            <button type="submit">Calcular el pedido</button>
+            <button type="submit" id="botonCalcular">Calcular el pedido</button>
         </form>
     </article>
     
 </body>
+
+<script>
+
+    var formulario = document.getElementById("formularioHamburguesa");
+    var boton = document.getElementById("botonCalcular");
+
+
+    function calcular (e) {
+
+        var total = 0.0;
+
+        if (formulario.TipoHamburguesa.value == "HamSencilla")
+        {
+            total = 49.99;
+        }
+        else if  (formulario.TipoHamburguesa.value == "HamSpecial")
+        {
+            total = 99.99;
+        }
+        else if  (formulario.TipoHamburguesa.value == "HamDoble")
+        {
+            total = 149.99;
+        }
+        else if  (formulario.TipoHamburguesa.value == "HamSuprem")
+        {
+            total = 199.99;
+        }
+
+        alert("Total a pagar es de: " + total)
+
+    }
+
+    formulario.addEventListener('submit', calcular);
+
+    
+</script>
 </html>

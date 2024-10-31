@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Suma version 02 JS</title>
+</head>
+<body>
+    <form id="operacion" action="">
+
+        <input type="number" name="" id="numeroUno">
+        <br>
+        <input type="number" name="" id="numeroDos">
+        <br>
+        <button id="boton" type="submit">Sumar los números</button>
+    </form>
+
+    <script>
+        function sumar(n1, n2)
+        {
+            var resultado;
+            resultado = n1 + n2;
+            return resultado;
+        }
+       
+        function ejecutar(e) {
+            var inputs = document.getElementsByTagName("input");
+            var nUno = inputs[0].value ;
+            var nDos =  inputs[1].value;
+            
+            var resultado = sumar(nUno, nDos);
+            alert(resultado);
+        }
+
+        var boton = document.getElementById("boton");
+        boton.addEventListener("click", ejecutar);
+
+    </script>
+
+</body>
+
+</html>
