@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Funciones JS</title>
 </head>
+
 <body>
     <form id="operacion" action="">
         <label for="">Escribe el número 1:</label>
@@ -14,6 +15,8 @@
         <input id="numeroDos" type="number">
         <br>
         <button id="boton" type="submit">Sumar los números</button>
+        <button id="resta" type="submit">Restar los números</button>
+
     </form>
 
 
@@ -25,30 +28,46 @@
         return resultado;
     }
 
-     //Forma 1 de obtener la información
-     /*
-    function operacion(e){
-        var inputs = document.getElementsByTagName("input");
-        var numUnoUsuario = inputs[0].value;
-        var numDosUsuario = inputs[1].value;
-
-        var mostrar = suma(numUnoUsuario, numDosUsuario);
-        alert(mostrar);
+    function resta(n1, n2) {
+        var resultado;
+        resultado = n1 - n2;
+        return resultado;
     }
 
-    var boton = document.getElementById("boton");
-    boton.addEventListener("click", operacion);
-    */
+     //Forma 1 de obtener la información  
+    // function operacion(e){
+    //     var inputs = document.getElementsByTagName("input");
+    //     var numUnoUsuario = parseFloat(inputs[0].value);
+    //     var numDosUsuario = parseFloat(inputs[1].value);
 
+    //     var mostrar = suma(numUnoUsuario, numDosUsuario);
+    //     alert(mostrar);
+    // }
+
+    // var boton = document.getElementById("boton");
+    // boton.addEventListener("click", operacion);
+    
     //Forma 2 de obtener la información
     function ejecutar(e){
         var captura = document.getElementById("operacion");
-        var mostrar = suma(captura.numeroUno.value, captura.numeroDos.value)
+        var mostrar = suma(
+            parseFloat(captura.numeroUno.value), 
+            parseFloat(captura.numeroDos.value)
+        );
+        alert(mostrar);
+    }
+
+    function ejecutarResta(e){
+        var captura = document.getElementById("operacion");
+        var mostrar = resta(
+            parseFloat(captura.numeroUno.value), 
+            parseFloat(captura.numeroDos.value)
+        );
         alert(mostrar);
     }
 
     var operacion = document.getElementById("operacion");
-    operacion.addEventListener("submit", ejecutar);
+    operacion.addEventListener("submit", ejecutarResta);
 </script>
 
 </body>
