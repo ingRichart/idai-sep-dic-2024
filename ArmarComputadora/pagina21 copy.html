@@ -164,7 +164,7 @@
 
                         </center>
                         <hr>
-                        <input type="checkbox" name="acc1" id="acc1" value="acc1" onclick="calPr();">
+                        <input type="checkbox" name="acc1" onclick="calPr();">
                         <label> Teclado y Mouse inalambricos 291.00 </label> <br>
                         <input type="checkbox" name="acc2" onclick="calPr();">
                         <label> Bocinas SoundRound 2,240.00 </label> <br>
@@ -233,93 +233,62 @@
         function calPr() {
 
             formulario.tot1.value = "";
-            var totalPesos = 0;
 
             //GABINETE
             if (formulario.gab.value == "Minitorre") {
-                // formulario.tot1.value = "618";
-                totalPesos = totalPesos + 618;
+                formulario.tot1.value = "618";
             }
             else if (formulario.gab.value == "Torre1") {
-                // formulario.tot1.value = "1700";
-                totalPesos = totalPesos + 1700;
+                formulario.tot1.value = "1700";
             }
             else if (formulario.gab.value == "Desktop") {
-                // formulario.tot1.value = "580";
-                totalPesos += 580;
+                formulario.tot1.value = "580";
             }
             else if (formulario.gab.value == "Gamer1") {
-                //formulario.tot1.value = "2700";
-                totalPesos += 2700;
-
+                formulario.tot1.value = "2700";
             }
 
             //PROCESADOR
             if (formulario.pro.value == "Celeron") {
-                totalPesos += 900;
+                formulario.tot1.value = "900";
             }
             else if (formulario.pro.value == "i3") {
-                // formulario.tot1.value = "1900";
-                totalPesos += 1900;
+                formulario.tot1.value = "1900";
             }
             else if (formulario.pro.value == "i5") {
-                // formulario.tot1.value = "2600";
-                totalPesos += 2600;
+                formulario.tot1.value = "2600";
             }
             else if (formulario.pro.value == "i7") {
-                // formulario.tot1.value = "6700";
-                totalPesos += 2600;
+                formulario.tot1.value = "6700";
             }
 
             //DISCO DURO
             if (formulario.disc.value == "500GB") {
-                // formulario.tot1.value = "520";
-                totalPesos += 520;
+                formulario.tot1.value = "520";
             }
             else if (formulario.disc.value == "750GB") {
-                // formulario.tot1.value = "650";
-                totalPesos += 650;
+                formulario.tot1.value = "650";
             }
             else if (formulario.disc.value == "1TB") {
-                // formulario.tot1.value = "880";
-                totalPesos += 880;
+                formulario.tot1.value = "880";
             }
             else if (formulario.disc.value == "250GBSSD") {
-                // formulario.tot1.value = "330";
-                totalPesos += 330;
+                formulario.tot1.value = "330";
             }
             else if (formulario.disc.value == "500GBSSD") {
-                // formulario.tot1.value = "770";
-                totalPesos += 770;
+                formulario.tot1.value = "770";
             }
 
             //MEMORIA RAM
             if (formulario.mem.value == "4GB") {
-                // formulario.tot1.value = "390";
-                totalPesos += 390;
-                
+                formulario.tot1.value = "390";
             }
             else if (formulario.mem.value == "8GB") {
-                // formulario.tot1.value = "500";
-                totalPesos += 500;
+                formulario.tot1.value = "500";
             }
             else if (formulario.mem.value == "16GB") {
-                // formulario.tot1.value = "800";
-                totalPesos += 800;
+                formulario.tot1.value = "800";
             }
-
-            //MOTHER BOARD
-            totalPesos += parseFloat(formulario.mb.value);
-            totalPesos += parseFloat(formulario.moni.value);
-
-            if (formulario.acc1.checked)
-            {
-                
-            }
-
-
-
-            formulario.tot1.value = totalPesos;
         }
     </script>
 
