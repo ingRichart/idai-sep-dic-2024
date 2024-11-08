@@ -164,41 +164,41 @@
 
                         </center>
                         <hr>
-                        <input type="checkbox" name="acc1" id="acc1" value="acc1" onclick="calPr();">
-                        <label> Teclado y Mouse inalambricos 291.00 </label> <br>
-                        <input type="checkbox" name="acc2" onclick="calPr();">
-                        <label> Bocinas SoundRound 2,240.00 </label> <br>
-                        <input type="checkbox" name="acc3" onclick="calPr();">
-                        <label> Camara web 1,070.00 </label> <br>
-                        <input type="checkbox" name="acc4" onclick="calPr();">
-                        <label> Diadema 900.00 </label> <br>
-                        <input type="checkbox" name="acc5" onclick="calPr();">
-                        <label> Scanner 1,820.00 </label> <br>
-                        <input type="checkbox" name="acc6" onclick="calPr();">
-                        <label> Impresora Laser B/N 2,500.00 </label> <br>
-                        <input type="checkbox" name="acc7" onclick="calPr();">
-                        <label> Impresora de Inyeccion color 2,700.00 </label> <br>
-                        <input type="checkbox" name="acc8" onclick="calPr();">
-                        <label> Joystick 960.00 </label> <br>
-                        <input type="checkbox" name="acc9" onclick="calPr();">
-                        <label> Memoria USB 8 GB 70.00 </label> <br>
-                        <input type="checkbox" name="acc10" onclick="calPr();">
-                        <label> Regulador 800.00 </label> <br>
-                        <input type="checkbox" name="acc11" onclick="calPr();">
-                        <label>Sistema Operativo Windows Home 2,400.00 </label> <br>
-                        <input type="checkbox" name="acc12" onclick="calPr();">
-                        <label> Office 365 Personal 1,300.00 </label> <br>
-                        <input type="checkbox" name="acc13" onclick="calPr();">
-                        <label>Vacuna Antivirus (Mc Affe) 400.00 </label> <br>
+<input type="checkbox" name="acc1" id="acc1" value="291" onclick="calPr();">
+<label> Teclado y Mouse inalambricos 291.00 </label> <br>
+<input type="checkbox" name="acc2" id="acc2" value="2240" onclick="calPr();">
+<label> Bocinas SoundRound 2,240.00 </label> <br>
+<input type="checkbox" name="acc3" id="acc3" value="1070" onclick="calPr();">
+<label> Camara web 1,070.00 </label> <br>
+<input type="checkbox" name="acc4" id="acc4" value="900" onclick="calPr();">
+<label> Diadema 900.00 </label> <br>
+<input type="checkbox" name="acc5" id="acc5" value="1820" onclick="calPr();">
+<label> Scanner 1,820.00 </label> <br>
+<input type="checkbox" name="acc6" id="acc6" value="2500" onclick="calPr();">
+<label> Impresora Laser B/N 2,500.00 </label> <br>
+<input type="checkbox" name="acc7" id="acc7" value="2700" onclick="calPr();">
+<label> Impresora de Inyeccion color 2,700.00 </label> <br>
+<input type="checkbox" name="acc8" id="acc8" value="960" onclick="calPr();">
+<label> Joystick 960.00 </label> <br>
+<input type="checkbox" name="acc9"  id="acc9" value="70" onclick="calPr();">
+<label> Memoria USB 8 GB 70.00 </label> <br>
+<input type="checkbox" name="acc10" id="acc10" value="800" onclick="calPr();">
+<label> Regulador 800.00 </label> <br>
+<input type="checkbox" name="acc11" id="acc11" value="2400" onclick="calPr();">
+<label>Sistema Operativo Windows Home 2,400.00 </label> <br>
+<input type="checkbox" name="acc12"  id="acc12" value="1300" onclick="calPr();">
+<label> Office 365 Personal 1,300.00 </label> <br>
+<input type="checkbox" name="acc13" id="acc13" value="400" onclick="calPr();">
+<label>Vacuna Antivirus (Mc Affe) 400.00 </label> <br>
                         <hr>
                         <center>
                             <br>
                             <font face="arial" color="white" size="3"> Tipo de cambio (Dlls &lt; --&gt; Pesos): <input
-                                    <input type="text" name="marca" size="9" value=18 onchange="calPr();"><br>
+                                    <input type="text" name="tc" id="tc" size="9" value=18 onchange="calPr();"><br>
                                 <hr>
                                 Total:
-                                <input type="text" name="tot1" size="5"> Pesos
-                                <input type="text" name="tot2" size="5"> Dolares
+                                <input type="text" name="tot1" size="5"> MXN
+                                <input type="text" name="tot2" size="5"> USD
                                 <br>
                         </center>
                 </td>
@@ -235,7 +235,7 @@
             formulario.tot1.value = "";
             var totalPesos = 0;
 
-            //GABINETE
+            //GABINETE RADIO
             if (formulario.gab.value == "Minitorre") {
                 // formulario.tot1.value = "618";
                 totalPesos = totalPesos + 618;
@@ -312,14 +312,75 @@
             totalPesos += parseFloat(formulario.mb.value);
             totalPesos += parseFloat(formulario.moni.value);
 
+            //INPUTS CheckBox
             if (formulario.acc1.checked)
             {
-                
+                totalPesos += parseFloat(formulario.acc1.value);
             }
 
+            if (formulario.acc2.checked)
+            {
+                totalPesos += parseFloat(formulario.acc2.value);
+            }
 
+            if (formulario.acc3.checked)
+            {
+                totalPesos += parseFloat(formulario.acc3.value);
+            }
+
+            if (formulario.acc4.checked)
+            {
+                totalPesos += parseFloat(formulario.acc4.value);
+            }
+
+            if (formulario.acc5.checked)
+            {
+                totalPesos += parseFloat(formulario.acc5.value);
+            }
+
+            if (formulario.acc6.checked)
+            {
+                totalPesos += parseFloat(formulario.acc6.value);
+            }
+
+            if (formulario.acc7.checked)
+            {
+                totalPesos += parseFloat(formulario.acc7.value);
+            }
+
+            if (formulario.acc8.checked)
+            {
+                totalPesos += parseFloat(formulario.acc8.value);
+            }
+
+            if (formulario.acc9.checked)
+            {
+                totalPesos += parseFloat(formulario.acc9.value);
+            }
+
+            if (formulario.acc10.checked)
+            {
+                totalPesos += parseFloat(formulario.acc10.value);
+            }
+
+            if (formulario.acc11.checked)
+            {
+                totalPesos += parseFloat(formulario.acc11.value);
+            }
+
+            if (formulario.acc12.checked)
+            {
+                totalPesos += parseFloat(formulario.acc12.value);
+            }
+
+            if (formulario.acc13.checked)
+            {
+                totalPesos += parseFloat(formulario.acc13.value);
+            }
 
             formulario.tot1.value = totalPesos;
+
+            formulario.tot2.value = totalPesos / parseFloat(formulario.tc.value);
         }
     </script>
 
