@@ -1,0 +1,155 @@
+<html>
+<head>
+<title> PAGINA 17 -- SALON DE FIESTAS INFANTILES </title>
+<script language="javascript">
+function XYZ()
+{
+
+A=salondefiestas.numinv.value;
+
+if(salondefiestas.cotind[0].checked==true) {B1=25;} else {B1=0;}
+if(salondefiestas.cotind[1].checked==true) {B2=30;} else {B2=0;}
+if(salondefiestas.cotind[2].checked==true) {B3=35;} else {B3=0;}
+if(salondefiestas.cotind[3].checked==true) {B4=35;} else {B4=0;}
+if(salondefiestas.cotind[4].checked==true) {B5=40;} else {B5=0;}
+TB=B1+B2+B3+B4+B5;
+
+if(salondefiestas.extra1.checked==true) {C1=500;} else {C1=0;}
+if(salondefiestas.extra2.checked==true) {C2=1000;} else {C2=0;}
+if(salondefiestas.extra3.checked==true) {C3=500;} else {C3=0;}
+if(salondefiestas.extra4.checked==true) {C4=20;} else {C4=0;}
+if(salondefiestas.extra5.checked==true) {C5=20;} else {C5=0;}
+if(salondefiestas.extra6.checked==true) {C6=10;} else {C6=0;}
+TC=C1+C2+C3+(A*C4)+(A*C5)+(A*C6);
+
+fechafiesta = salondefiestas.fechev.value; 
+dias = ['lunes','martes','miércoles','jueves','viernes','sábado','domingo',];
+numeroDia = new Date(fechafiesta).getDay();
+nombreDia = dias[numeroDia];
+if(numeroDia<=3) {desc=.2;} else {desc=0;}
+
+TTTT=((A*TB)+TC)*(1-desc);
+
+salondefiestas.totcot.value=TTTT;
+
+
+
+}
+
+</script>
+    </head>
+<body bgcolor="purple">
+<br>
+<hr color="white" size="3">
+<center>
+<table width="80%"  bgcolor="skyblue">
+<tr align="center">
+<td width="30%">
+<img src="imagenes/salonlogo.png" width="80%" >
+<font color="purple" face="arial black" size="3"> Cumpleaños-Bautizos- Primeras comuniones- Graduaciones- Posadas</font><br>
+<marquee bgcolor="skyblue"> 
+<img src="imagenes/party.png"width="10%">
+<img src="imagenes/party.png"width="10%">
+<img src="imagenes/party.png"width="10%">
+<img src="imagenes/party.png" width="10%">
+</marquee>
+</td>
+<td width="70%">
+<img src="imagenes/salonfiestas.jpg"width="95%">
+</td>
+</tr>
+</table>
+<hr color="white" size="3">
+<br>
+<form name="salondefiestas">
+<table width="80%" bgcolor="slyblue">
+<tr>
+<td width="30%">
+
+<font color="purple" face="arial black" size="4"> DATOS DEL CLIENTE </font><br>
+<hr size="2">
+<font color="black" face="arial" size="4"> NOMBRE: </font><input type="text" name="nom" size="30">
+<br>
+<font color="black" face="arial" size="4"> TELEFONO: </font><input type="text" name="nom" size="15">
+<br>
+<hr>
+<font color="purple" face="arial black" size="4"> NUMERO DE INVITADOS</font>
+<select name="numinv"  onchange="XYZ();">
+<option value=40>40 personas</option>
+<option value=60>60  personas</option>
+<option value=80>80  personas</option>
+<option value=100>100 personas</option>
+<option value=120>120  personas</option>
+</select>
+<br>
+<hr>
+<font color="purple" face="arial black" size="4">FECHA DEL EVENTO</font>
+<input type="date" name="fechev" size="15" min="2024-01-01" max="2024-12-31"   onchange="XYZ();">
+<hr>
+<font color="purple" face="arial black" size="4">HORARIO DEL EVENTO</font>
+
+<input type="time" value="13:00" name="horhev"
+         min="13:00" max="21:00" step="3600" onchange="XYZ();">
+<hr>
+<b>
+<font face="arial">
+De lunes a jueves se otorga un 20% de descuento.
+<br>
+Horarios despues de las 4:00 pm aumentan un 15%.
+<br>
+    <u> AGENDA 2024 </u></font></b>
+
+</td>
+<td width="30%">
+<font color="purple" face="arial black" size="4">TIPO DE ALIMENTO</font>
+<hr>
+<input type="radio" name="cotind" onclick="XYZ();"> <font face="arial" size="3">Taquitos al vapor 25.00</font><br> 
+<input type="radio" name="cotind"  onclick="XYZ();"> <font face="arial" size="3">Hotdog   30.00</font><br>
+<input type="radio" name="cotind"  onclick="XYZ();"> <font face="arial" size="3">Chilidog  35.00</font><br>
+<input type="radio" name="cotind"  onclick="XYZ();"> <font face="arial" size="3">Marinitas 35.00</font><br> 
+<input type="radio" name="cotind"  onclick="XYZ();"> <font face="arial" size="3">Hamburguesas 40.00</font><br>
+
+<br>
+<center><b>
+<font color="purple" face="arial" size="4">En cualquier evento se prohibe el consumo de bebidas alcoholicas y humo de cigarro</font>
+</b>
+<hr>
+<b>
+<font face="arial">
+    El calculo de alimentacion es por persona. 
+    Incluye solo agua de sabores.</font></b>
+</center>
+</td>
+<td with="30%">
+<font color="purple" face="arial black" size="3">SERVICIOS EXTRAS</font><br>
+<hr>
+<font color="purple" face="arial black" size="3">La renta del salon de fiestas incluye servicio de invitaciones, botana, aguas frescas y anfitriones.</font><br>
+<font face="arial" >
+<input type="checkbox" name="extra1"  onclick="XYZ();">Botargas 500.00<br>
+<input type="checkbox" name="extra2"  onclick="XYZ();"> Show infantil (tematico) 1000.00<br>
+<input type="checkbox" name="extra3"  onclick="XYZ();"> Piñata 500.00<br>
+<input type="checkbox" name="extra4"  onclick="XYZ();"> Bolsitas de dulces 20.00 p/p<br>
+<input type="checkbox" name="extra5"  onclick="XYZ();"> Refrescos 20.00 p/p<br>
+<input type="checkbox" name="extra6"  onclick="XYZ();"> Pastel 10.00 p/p<br>
+<br>
+</font>
+<hr>
+<b>
+<font face="arial">
+Los costos de refresco, pastel y bolsitas se calcula de acuerdo al numero de personas.
+</font>
+</b>
+</td>
+</tr>
+</table>
+<br>
+<font color="white" face="arial black" size="4">TOTAL DE LA COTIZACION:  </font>
+<input type="text" name="totcot">
+
+
+</form>
+<br>
+<hr color="white" size="3">
+</center>
+</body>
+</html>

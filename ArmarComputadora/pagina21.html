@@ -194,11 +194,11 @@
                         <center>
                             <br>
                             <font face="arial" color="white" size="3"> Tipo de cambio (Dlls &lt; --&gt; Pesos): <input
-                                    <input type="text" name="marca" size="9" value=18 onchange="calPr();"><br>
+                                    <input type="text" name="tc" id="tc" size="9" value=18 onchange="calPr();"><br>
                                 <hr>
                                 Total:
-                                <input type="text" name="tot1" size="5"> Pesos
-                                <input type="text" name="tot2" size="5"> Dolares
+                                <input type="text" name="tot1" size="5"> MXN
+                                <input type="text" name="tot2" size="5"> USD
                                 <br>
                         </center>
                 </td>
@@ -235,7 +235,7 @@
             formulario.tot1.value = "";
             var totalPesos = 0;
 
-            //GABINETE (RABIO)
+            //GABINETE
             if (formulario.gab.value == "Minitorre") {
                 // formulario.tot1.value = "618";
                 totalPesos = totalPesos + 618;
@@ -367,6 +367,8 @@
                 totalPesos += parseFloat(formulario.acc13.value);
             }           
             formulario.tot1.value = totalPesos;
+
+            formulario.tot2.value = totalPesos / parseFloat(formulario.tc.value);
         }
     </script>
 
