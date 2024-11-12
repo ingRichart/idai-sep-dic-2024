@@ -164,31 +164,31 @@
 
                         </center>
                         <hr>
-                        <input type="checkbox" name="acc1" id="acc1" value="acc1" onclick="calPr();">
+                        <input type="checkbox" name="acc1" id="acc1" value="291" onclick="calPr();">
                         <label> Teclado y Mouse inalambricos 291.00 </label> <br>
-                        <input type="checkbox" name="acc2" onclick="calPr();">
+                        <input type="checkbox" name="acc2" id="acc2" value="2240" onclick="calPr();">
                         <label> Bocinas SoundRound 2,240.00 </label> <br>
-                        <input type="checkbox" name="acc3" onclick="calPr();">
+                        <input type="checkbox" name="acc3" id="acc3" value="1070" onclick="calPr();">
                         <label> Camara web 1,070.00 </label> <br>
-                        <input type="checkbox" name="acc4" onclick="calPr();">
+                        <input type="checkbox" name="acc4" id="acc4" value="900" onclick="calPr();">
                         <label> Diadema 900.00 </label> <br>
-                        <input type="checkbox" name="acc5" onclick="calPr();">
+                        <input type="checkbox" name="acc5" id="acc5" value="1820" onclick="calPr();">
                         <label> Scanner 1,820.00 </label> <br>
-                        <input type="checkbox" name="acc6" onclick="calPr();">
+                        <input type="checkbox" name="acc6" id="acc6" value="2500" onclick="calPr();">
                         <label> Impresora Laser B/N 2,500.00 </label> <br>
-                        <input type="checkbox" name="acc7" onclick="calPr();">
+                        <input type="checkbox" name="acc7" id="acc7" value="2700" onclick="calPr();">
                         <label> Impresora de Inyeccion color 2,700.00 </label> <br>
-                        <input type="checkbox" name="acc8" onclick="calPr();">
+                        <input type="checkbox" name="acc8" id="acc8" value="960" onclick="calPr();">
                         <label> Joystick 960.00 </label> <br>
-                        <input type="checkbox" name="acc9" onclick="calPr();">
+                        <input type="checkbox" name="acc9" id="acc9" value="70" onclick="calPr();">
                         <label> Memoria USB 8 GB 70.00 </label> <br>
-                        <input type="checkbox" name="acc10" onclick="calPr();">
+                        <input type="checkbox" name="acc10" id="acc10" value="800" onclick="calPr();">
                         <label> Regulador 800.00 </label> <br>
-                        <input type="checkbox" name="acc11" onclick="calPr();">
+                        <input type="checkbox" name="acc11" id="acc11" value="2400" onclick="calPr();">
                         <label>Sistema Operativo Windows Home 2,400.00 </label> <br>
-                        <input type="checkbox" name="acc12" onclick="calPr();">
+                        <input type="checkbox" name="acc12" id="acc12" value="1300" onclick="calPr();">
                         <label> Office 365 Personal 1,300.00 </label> <br>
-                        <input type="checkbox" name="acc13" onclick="calPr();">
+                        <input type="checkbox" name="acc13" id="acc13" value="400" onclick="calPr();">
                         <label>Vacuna Antivirus (Mc Affe) 400.00 </label> <br>
                         <hr>
                         <center>
@@ -235,7 +235,7 @@
             formulario.tot1.value = "";
             var totalPesos = 0;
 
-            //GABINETE
+            //GABINETE (RABIO)
             if (formulario.gab.value == "Minitorre") {
                 // formulario.tot1.value = "618";
                 totalPesos = totalPesos + 618;
@@ -297,7 +297,7 @@
             if (formulario.mem.value == "4GB") {
                 // formulario.tot1.value = "390";
                 totalPesos += 390;
-                
+
             }
             else if (formulario.mem.value == "8GB") {
                 // formulario.tot1.value = "500";
@@ -308,17 +308,64 @@
                 totalPesos += 800;
             }
 
-            //MOTHER BOARD
+            //MOTHER BOARD (COMBOBOX)
             totalPesos += parseFloat(formulario.mb.value);
             totalPesos += parseFloat(formulario.moni.value);
 
-            if (formulario.acc1.checked)
-            {
-                
+
+            //PERIFERICOS (CHECKBOX)
+            if (formulario.acc1.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc1.value);
             }
-
-
-
+            if (formulario.acc2.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc1.value);
+            }
+            if (formulario.acc3.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc1.value);
+            }
+            if (formulario.acc4.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc1.value);
+            }
+            if (formulario.acc5.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc1.value);
+            }
+            if (formulario.acc6.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc1.value);
+            }
+            if (formulario.acc7.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc7.value);
+            }
+            if (formulario.acc8.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc8.value);
+            }
+            if (formulario.acc9.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc9.value);
+            }
+            if (formulario.acc10.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc10.value);
+            }
+            if (formulario.acc11.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc11.value);
+            }            
+            if (formulario.acc12.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc12.value);
+            }            
+            if (formulario.acc13.checked) {
+                // console.info("acc1.checked = TRUE");
+                totalPesos += parseFloat(formulario.acc13.value);
+            }           
             formulario.tot1.value = totalPesos;
         }
     </script>
