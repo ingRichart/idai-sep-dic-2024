@@ -1,0 +1,176 @@
+
+<meta charset="UTF-8">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Nutrición</title>
+
+	<style>
+		.titulo{
+			color: #FFE4C4 ; 
+			font-size: 25px;
+		}
+
+		.letras{
+			color: grey;
+		}
+
+		table{
+				margin: auto;
+				/* margin-top: 50px; */
+				/* text-align: center; */
+				font-family: Arial, Helvetica, sans-serif;
+				font-size: 16px;
+				border-collapse: collapse;
+				width: 100%;
+			}
+
+
+		table th{
+			background-color: #FFE4C4;
+			color: white;
+			/* font-weight: 1500;*/
+			/* width: 100px;  */
+		}
+
+		table td{
+			color: grey;
+		} 
+
+		select{
+			color: grey;
+		}
+
+/* 
+		th{
+
+			text-align: center;
+			font-size: 25px;
+		}
+		
+		th,tr{
+			font-size: 15px;
+
+		} */
+	</style>
+</head>
+
+<body bgcolor="#FFFFFF">
+
+	<img src="redes.png" width=100%><br>
+	<img src="logo.png" width=100%>
+	<br>
+	<p class="titulo"><b>Servicios </b></p>
+	<p>
+		<ul class="letras">
+			<li>Control de peso</li>
+			<li>Prevención y tratamiento de enfermedades crónicas</li>
+		</ul>
+		<p class="letras">
+			Todas nuestras consultas incluyen análisis de composición corporal InBody, evaluación clínica nutricional, plan
+		de alimentación individualizado, lista de productos recomendados, recomendaciones generales (ejercicio, estilo
+		de vida, suplementación en caso necesario) y asesoría via Whatsapp.
+		</p>
+		<p class="letras">*Todos nuestros paquetes tienen una vigencia de 6 meses a partir de la primera consulta</p>
+	</p>
+	<br>
+	<form>
+		<table>
+			<thead>
+				<tr>
+					<th>
+						<b>Consulta online o presencial</b>
+					</th>
+					<th>
+						<b>Otros Servicios</b>
+					</th>
+					<th>
+						<b>Preparación</b>
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						<input type="radio">Primera Consulta $850 MXN<br>
+						<input type="radio">Seguimiento $700 MXN<br>
+						<input type="radio">Paquete de 3 Consultas $2,000 MXN<br>
+						<input type="radio">Paquete pareja $5,000 MXN<br>
+					</td>
+					<td>
+						<select>
+							<option>
+								Análisis de Composición corporal Sin consulta + $200
+							</option>
+							<option>
+								Análisis de Composición corporal con consulta + $1000
+							</option>
+						</select>
+	
+					</td>
+					<td>
+						<input type="checkbox">Recetas $1,000<br>
+						<input type="checkbox">Ejercicios $1,000<br>
+						<input type="checkbox">Revista semanal $150<br>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+
+			</tfoot>
+		</table>
+
+		<!-- <table>
+			<tr align="center">
+				<img src="contacto.png" width=100%>
+			</tr>
+		</table> -->
+
+		<table>
+			<thead>
+				<tr>
+					<th colspan="2">
+						AGENDA TU CITA
+					</th>
+					<th>
+						TIPO DE PAGO
+					</th>
+					<th>
+						REQUIERE FACTURA?(si o no)
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>
+						Nombre<br>
+						Domicilio
+					</td>
+					<td>
+						<input type="text"><br>
+						<input type="text">
+					</td>
+					<td>
+						<select>
+							<option>Efectivo +0%</option>
+							<option>Tarjeta de Credito o Debito +6%</option>
+							<option>Transferencia Electronica + 3%</option>
+						</select>
+					</td>
+					<td>
+						<input type="text" name="FAC" size="15">
+					</td>
+				</tr>
+			</tbody>
+			<tfoot>
+
+			</tfoot>
+		</table>
+		<hr color="black">
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recibo Telefonico</title>
+
+    <style>
+        body {
+            background-color: #e7c010f3
+        }
+
+        h1 {
+            font: "broadway";
+        }
+
+        label {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <form action=""></form> -->
+    <form id="calculoMinutos" action="ReciboTelefonico(JS).html" method="GET">
+        <h1>Recibo Telefonico</h1>
+        <label for="">Minutos de celular (10.00 MXN c/u)</label>
+        <br>
+        <input type="number" id="minCel" value="1">
+
+        <hr>
+        <label for="">Tipo de Plan</label>
+        <br>
+        <input type="radio" name="plan" value="tel">Solo teléfono<br>
+        <input type="radio" name="plan" value="int">Teléfono + Internet<br>
+        <input type="radio" name="plan" value="tv">Teléfono + Internet + TV<br>
+
+        <hr>
+        <label for="">Tipo de Plan</label>
+        <br>
+        <input type="checkbox" name="anti">Antivirus<br>
+        <input type="checkbox" name="nube">Serivicio de Nube<br>
+        <input type="checkbox" name="web">Web Services<br>
+
+        <hr>
+        <label for="">Paquetes</label>
+        <br>
+        <select name="paquete">
+            <option value="residencial">Residencial</option>
+            <option value="pyme">PYMES</option>
+            <option value="empresa">Empresas</option>
+        </select>
+
+        <hr>
+        <div class="result">
+            <input type="text" id="resultado"></p>
+        </div>
+
+        <button type="button" onclick="calcular()">Calcular</button>
+
+    </form>
+
+
+    <script>
+        var formulario = document.getElementById("calculoMinutos");
+
+        function calcular() {
+
+
+            var minCel = parseInt(formulario.minCel.value);
+            var total = 0;
+            total = minCel * 10;
+
+            if (formulario.plan.value == "tel") {
+                total += 100;
+            }
+
+            else if (formulario.plan.value == "int") {
+                total += 200;
+            }
+            else if (formulario.plan.value == "tv") {
+                total += 300;
+            }
+
+
+            if (formulario.anti.checked) {
+                total += 50;
+            }
+            if (formulario.nube.checked) {
+                total += 60;
+            }
+            if (formulario.web.checked) {
+                total += 70;
+            }
+
+            if(formulario.paquete.value == "residencial")
+            {
+                total += 0;
+            }
+            else if (formulario.paquete.value == "pyme")
+            {
+                total += 1000;
+            }
+            else if (formulario.paquete.value == "empresa")
+            {
+                total += 2000;
+            }
+
+            formulario.resultado.value = total;
+
+        }
+
+    </script>
+</body>
+
+</html>
