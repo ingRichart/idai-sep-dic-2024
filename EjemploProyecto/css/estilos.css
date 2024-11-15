@@ -123,3 +123,55 @@ body{
 .menu-bar .sociales a:hover{
     color: var(--color-secundario);
 }
+
+.menu-principal i{
+    cursor: pointer;
+    color: var(--color-texto);
+    font-size: 30px;
+    float: right; /* PARA QUE SIEMPRE ESTE A LA DERECHA*/
+    transition: all 0.5s; 
+
+    /* display: none; */
+}
+
+.menu-principal i:hover{
+    color: var(--color-secundario);
+}
+
+/* MEDIA QUERYS */
+@media screen and (max-width: 650px){
+    /* MENU PRINCIPAL */
+    .menu-principal{
+         position: fixed; /*Para que este fijo siempre*/
+         top: 0; /*Y con top 0 en la parte superior */
+         margin-top: 0; /*Esto es para quitarle el marguen que tiene en la parte superior*/
+    }
+
+    .menu-principal i{
+         display: block;
+    } 
+
+    .menu-bar{
+         justify-content: space-around;
+         align-items: center;
+         /*Con esto el menu aparece en forma de columnas, uno encima del otro*/
+         flex-direction: column; 
+
+         width: 100%;
+         height: 100vh;
+         position: fixed;
+         right: 0;
+         top: 0;
+
+         z-index: 1000;
+         background: #333;
+
+         transition: all 1s;
+         transform: translateX(100%);
+    }
+
+    .menu-bar.active{
+         transform: translateX(0%);
+    }
+
+}
