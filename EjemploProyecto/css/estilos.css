@@ -174,4 +174,22 @@ body{
          transform: translateX(0%);
     }
 
+    .menu-bar i{
+        position: absolute;
+        right: 50px;
+        top: 50px;
+    }
+
+    .menu-bar .enlaces ul li{
+        display: block;
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .menu-bar .enlaces ul li a,
+    .menu-bar .sociales a{
+        font-size: 20px;
+
+    }
+
 }
