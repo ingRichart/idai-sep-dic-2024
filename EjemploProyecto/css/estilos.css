@@ -131,7 +131,7 @@ body{
     float: right; /* PARA QUE SIEMPRE ESTE A LA DERECHA*/
     transition: all 0.5s; 
 
-    /* display: none; */
+    display: none;
 }
 
 .menu-principal i:hover{
