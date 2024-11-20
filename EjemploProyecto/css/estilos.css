@@ -1,5 +1,5 @@
 /* VARIABES*/
-:root{
+:root {
     --color-primario: #FCB03B;
     --color-secundario: #E92F3D;
     --color-background: #EFF6F5;
@@ -8,18 +8,18 @@
 }
 
 /* SECCION GENERAL*/
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: var(--text-default);
 }
 
-body{
+body {
     background: var(--color-background);
 }
 
-.titulos{
+.titulos {
     font-size: 40px;
     font-weight: 600;
     text-align: center;
@@ -27,7 +27,7 @@ body{
     letter-spacing: 1px;
 }
 
-.subtitulos{
+.subtitulos {
     font-size: 25px;
     font-weight: 400;
     text-align: center;
@@ -35,7 +35,7 @@ body{
     color: var(--color-primario);
 }
 
-.btn{
+.btn {
     text-decoration: none;
     text-transform: uppercase;
     font-size: 14px;
@@ -48,20 +48,20 @@ body{
     cursor: pointer;
 
     position: relative;
-    top:20px;
+    top: 20px;
     transition: all 0.3s;
 }
 
-.btn span{
+.btn span {
     padding-left: 10px;
 }
 
-.btn:hover{
+.btn:hover {
     padding: 15px 45px;
 }
 
 /*MENU PRINCIPAL*/
-.menu-principal{
+.menu-principal {
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -74,23 +74,23 @@ body{
     z-index: 1;
 }
 
-.logo img{
+.logo img {
     width: 130px;
     cursor: pointer;
 }
 
-.menu-bar{
+.menu-bar {
     display: flex;
     width: 100%;
     justify-content: space-between;
 }
 
-.menu-bar .enlaces ul li{
+.menu-bar .enlaces ul li {
     display: inline-block;
     padding: 0 10px;
 }
 
-.menu-bar .enlaces ul li a{
+.menu-bar .enlaces ul li a {
     font-size: 14px;
     text-transform: uppercase;
     text-decoration: none;
@@ -105,12 +105,12 @@ body{
     transition: all 0.5s;
 }
 
-.menu-bar .enlaces ul li a:hover{
+.menu-bar .enlaces ul li a:hover {
     color: var(--color-secundario);
     background-size: 50% 2px;
 }
 
-.menu-bar .sociales a{
+.menu-bar .sociales a {
     font-size: 16px;
     text-transform: uppercase;
     padding: 0 10px;
@@ -120,76 +120,334 @@ body{
     transition: all 0.5s;
 }
 
-.menu-bar .sociales a:hover{
+.menu-bar .sociales a:hover {
     color: var(--color-secundario);
 }
 
-.menu-principal i{
+.menu-principal i {
     cursor: pointer;
     color: var(--color-texto);
     font-size: 30px;
-    float: right; /* PARA QUE SIEMPRE ESTE A LA DERECHA*/
-    transition: all 0.5s; 
+    float: right;
+    /* PARA QUE SIEMPRE ESTE A LA DERECHA*/
+    transition: all 0.5s;
 
     display: none;
 }
 
-.menu-principal i:hover{
+.menu-principal i:hover {
     color: var(--color-secundario);
 }
 
-/* MEDIA QUERYS */
-@media screen and (max-width: 650px){
+
+/* SLIDER DE PRODUCTOS */
+#menu-productos .contenedor-principal {
+    display: flex;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+}
+
+.contenedor-principal #btn-izquierda,
+.contenedor-principal #btn-derecha {
+    position: absolute;
+    height: 10%;
+    width: 50px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 40px;
+    margin: 0 15px;
+    color: var(--color-secundario);
+    z-index: 500;
+    outline: none;
+    transition: all 0.3s;
+}
+
+.contenedor-principal #btn-izquierda:hover,
+.contenedor-principal #btn-derecha:hover {
+    background: var(--color-backgroud-sombra);
+    transform: translateY(5px);
+}
+
+
+.contenedor-principal #btn-izquierda {
+    left: 0;
+}
+
+
+.contenedor-principal #btn-derecha {
+    right: 0;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    height: calc(100vh - 80px);
+    scroll-behavior: smooth;
+}
+
+.container-productos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-basis: 100%;
+    flex-shrink: 0;
+}
+
+.descripcion-productos {
+    width: 30%;
+}
+
+.descripcion-productos h1 {
+    font-size: 5vw;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.descripcion-productos h2 {
+    text-transform: lowercase;
+    font-size: 2.2vw;
+    font-weight: 100;
+}
+
+.descripcion-productos p {
+    color: var(--color-texto);
+    font-style: italic;
+    text-align: justify;
+}
+
+
+.imagen-productos {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+}
+
+.imagen-productos img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: all 0.3s;
+}
+
+.container-productos:hover .imagen-productos img {
+    transform: scale(1.15);
+}
+
+
+/* SECCION SERVICIOS */
+#servicios{
+    height: 100vh;
+    background: #FFF;
+    padding: 40px;
+}
+
+.servicios-tiulos{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.servicios-container{
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 30px;
+    grid-template-areas:     "ingredientes  imagen    rapidez"
+                             "calidad       imagen    entrega";
+}
+
+.calidad{
+    grid-row: calidad;
+    grid-column: calidad;
+}
+
+.ingredientes{
+    grid-row: ingredientes;
+    grid-column: ingredientes;
+}
+
+.rapidez{
+    grid-row: rapidez;
+    grid-column: rapidez;
+}
+
+.entrega{
+    grid-row: entrega;
+    grid-column: entrega;
+}
+
+.imagen-central{
+    grid-row: imagen;
+    grid-column: imagen;
+    transition: all 0.5s;
+}
+
+.imagen-central:hover{
+     transform: scale(1.1);
+}
+
+.items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.items span{
+    width: 95px;
+    font-size: 40px;
+    color: var(--color-secundario);
+    padding: 20px;
+    border: 5px double #dedede;
+    border-radius: 50%;
+    text-align: center;
+    transition: all 0.5s;
+}
+
+.items span:hover{
+    background: var(--color-secundario);
+    color: #FFF;
+}
+
+.ingredientes span, 
+.calidad span{
+     color: var(--color-primario);
+}
+
+.ingredientes span:hover, 
+.calidad span:hover{
+     background: var(--color-primario);
+     color: #FFF;
+}
+
+
+.items .titulo-item{
+    text-transform: uppercase;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: center;
+}
+
+.items .texto-item{
+    font-size: 14px;
+    color: var(--color-texto);
+    text-align: center;
+    font-style: italic;
+    padding: 0 20px;
+} 
+
+
+
+
+/* MEDIA QUERYS 850 px*/
+@media screen and (max-width: 850px){
+    /* SLIDER PRODUCTOS */
+    .container-productos{
+         flex-direction: column;
+    }
+
+    .descripcion-productos{
+         width: 70%;
+         order: 1;
+    }
+
+    .descripcion-productos .btn{
+         padding: 10px 20px;
+    }
+
+    .descripcion-productos .btn:hover{
+         padding: 10px 30px;
+    }
+
+    /*SECCION DE SERVICIOS*/
+    .servicios-container{
+        margin-top: 50px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: "ingredientes    rapidez"
+                             "calidad         entrega";
+    }
+
+    .imagen-central{
+        display: none;
+    }
+}
+
+/* MEDIA QUERYS 650 px*/
+@media screen and (max-width: 650px) {
+
     /* MENU PRINCIPAL */
-    .menu-principal{
-         position: fixed; /*Para que este fijo siempre*/
-         top: 0; /*Y con top 0 en la parte superior */
-         margin-top: 0; /*Esto es para quitarle el marguen que tiene en la parte superior*/
+    .menu-principal {
+        position: fixed;
+        /*Para que este fijo siempre*/
+        top: 0;
+        /*Y con top 0 en la parte superior */
+        margin-top: 0;
+        /*Esto es para quitarle el marguen que tiene en la parte superior*/
     }
 
-    .menu-principal i{
-         display: block;
-    } 
-
-    .menu-bar{
-         justify-content: space-around;
-         align-items: center;
-         /*Con esto el menu aparece en forma de columnas, uno encima del otro*/
-         flex-direction: column; 
-
-         width: 100%;
-         height: 100vh;
-         position: fixed;
-         right: 0;
-         top: 0;
-
-         z-index: 1000;
-         background: #333;
-
-         transition: all 1s;
-         transform: translateX(100%);
+    .menu-principal i {
+        display: block;
     }
 
-    .menu-bar.active{
-         transform: translateX(0%);
+    .menu-bar {
+        justify-content: space-around;
+        align-items: center;
+        /*Con esto el menu aparece en forma de columnas, uno encima del otro*/
+        flex-direction: column;
+
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        right: 0;
+        top: 0;
+
+        z-index: 1000;
+        background: #333;
+
+        transition: all 1s;
+        transform: translateX(100%);
     }
 
-    .menu-bar i{
+    .menu-bar.active {
+        transform: translateX(0%);
+    }
+
+    .menu-bar i {
         position: absolute;
         right: 50px;
         top: 50px;
     }
 
-    .menu-bar .enlaces ul li{
+    .menu-bar .enlaces ul li {
         display: block;
         padding: 20px 10px;
         text-align: center;
     }
 
     .menu-bar .enlaces ul li a,
-    .menu-bar .sociales a{
+    .menu-bar .sociales a {
         font-size: 20px;
 
+    }
+
+    /* SLIDER PRODUCTOS */
+    .slider {
+        height: calc(100vh - 0px);
+    }
+
+    .imagen-productos {
+        width: 65%;
+    }
+
+    .descripcion-productos h1 {
+        font-size: 7vw;
+    }
+
+    .descripcion-productos h2 {
+        font-size: 3vw;
     }
 
 }
