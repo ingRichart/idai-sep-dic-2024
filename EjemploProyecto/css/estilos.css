@@ -342,6 +342,114 @@ body {
 
 
 
+/* SECCION DE EQUIPO */
+
+/* PASO01 */
+#equipo{
+    height: 100vh;
+    display: flex;
+}
+
+.persona{
+    flex-grow: 1;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s; /* APLICARLO CUANDO LLEGUE AL PUNTO 03*/
+}
+
+/* PASO 02, har la linea y mostrar en el NAVEGADOR */
+.persona-imagen{
+    height: 100%;
+    position: absolute;
+    
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    filter: grayscale(80%); /*NUEVA PROPIDAD*/
+}
+
+/*PASO 03, aplicar los efectos en las imagenes*/
+.persona:hover{
+    flex-grow: 3;
+}
+
+.persona:hover .persona-imagen{
+    filter: grayscale(0%);
+}
+
+/*PASO 04. LOS ICONOS*/
+.persona-info{
+    position: absolute;
+    bottom: 10px;
+    
+    width: 100%;
+    text-align: center;
+
+    /*PASO 08*/
+    opacity: 0; 
+    transition: all 0.1s; 
+}
+
+/*PASO 08 EL OCULTAR LOS ICONOS */
+.persona:hover .persona-info{
+    opacity: 1;
+    bottom: 60px;
+    transition-delay: 0.3s;
+}
+
+
+/*PASO 05. LOS  TITULOS*/
+.persona-info h2{
+    font-size: 30px;
+    color: black;
+    font-weight: 600;
+
+    /*ESTO HACERLO CON LAS HERRAMIENTAS DE DESARROLLADOR*/
+    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+}
+
+/*PASO 05. EL PUESTO*/
+.persona-info p{
+    color: var(--color-secundario);
+    font-size: 20px;
+    font-weight: 700;
+    font-style: italic;
+    margin-top: 8px;
+    margin-bottom: 20px;
+
+    text-shadow: 2px 2px 3px rgba(255,0,0,0.5);
+}
+
+/* PASO 06. SOCIAL MEDIA ICONOS */
+.social-media a{
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+
+    color: #fff;
+    background: var(--color-secundario);
+
+    line-height: 40px;
+
+    border-radius: 50%;
+    margin: 0 5px;
+    font-size: 18px;
+
+    cursor: pointer;
+
+    transition: all 0.5s; /* APLICARLO AL PUNTO 07 */
+}
+
+/* PASO 07. EFECTO SOCIAL MEDIA ICONOS */
+.social-media a:hover{
+    color: var(--color-secundario);
+    background: transparent;
+    transform: scale(2);
+}
+
+
+
 /* MEDIA QUERYS 850 px*/
 @media screen and (max-width: 850px){
     /* SLIDER PRODUCTOS */
