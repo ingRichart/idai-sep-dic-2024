@@ -236,67 +236,67 @@ body {
 
 
 /* SECCION SERVICIOS */
-#servicios{
+#servicios {
     height: 100vh;
     background: #FFF;
     padding: 40px;
 }
 
-.servicios-tiulos{
+.servicios-tiulos {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.servicios-container{
+.servicios-container {
     margin-top: 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, auto);
     grid-gap: 30px;
-    grid-template-areas:     "ingredientes  imagen    rapidez"
-                             "calidad       imagen    entrega";
+    grid-template-areas: "ingredientes  imagen    rapidez"
+        "calidad       imagen    entrega";
 }
 
-.calidad{
+.calidad {
     grid-row: calidad;
     grid-column: calidad;
 }
 
-.ingredientes{
+.ingredientes {
     grid-row: ingredientes;
     grid-column: ingredientes;
 }
 
-.rapidez{
+.rapidez {
     grid-row: rapidez;
     grid-column: rapidez;
 }
 
-.entrega{
+.entrega {
     grid-row: entrega;
     grid-column: entrega;
 }
 
-.imagen-central{
+.imagen-central {
     grid-row: imagen;
     grid-column: imagen;
     transition: all 0.5s;
 }
 
-.imagen-central:hover{
-     transform: scale(1.1);
+.imagen-central:hover {
+    transform: scale(1.1);
 }
 
-.items{
+.items {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
 }
 
-.items span{
+.items span {
     width: 95px;
     font-size: 40px;
     color: var(--color-secundario);
@@ -307,101 +307,101 @@ body {
     transition: all 0.5s;
 }
 
-.items span:hover{
+.items span:hover {
     background: var(--color-secundario);
     color: #FFF;
 }
 
-.ingredientes span, 
-.calidad span{
-     color: var(--color-primario);
+.ingredientes span,
+.calidad span {
+    color: var(--color-primario);
 }
 
-.ingredientes span:hover, 
-.calidad span:hover{
-     background: var(--color-primario);
-     color: #FFF;
+.ingredientes span:hover,
+.calidad span:hover {
+    background: var(--color-primario);
+    color: #FFF;
 }
 
 
-.items .titulo-item{
+.items .titulo-item {
     text-transform: uppercase;
     font-size: 15px;
     font-weight: 700;
     text-align: center;
 }
 
-.items .texto-item{
+.items .texto-item {
     font-size: 14px;
     color: var(--color-texto);
     text-align: center;
     font-style: italic;
     padding: 0 20px;
-} 
+}
 
 /* SECCION DE EQUIPO */
-#equipo{
+#equipo {
     height: 100vh;
     display: flex;
 }
 
-.persona{
+.persona {
     flex-grow: 1;
     overflow: hidden;
     position: relative;
-    transition: all 0.5s; 
+    transition: all 0.5s;
 }
 
-.persona-imagen{
+.persona-imagen {
     height: 100%;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    filter: grayscale(80%); 
+    filter: grayscale(80%);
 }
 
-.persona:hover{
+.persona:hover {
     flex-grow: 3;
 }
 
-.persona:hover .persona-imagen{
+.persona:hover .persona-imagen {
     filter: grayscale(0%);
 }
 
-.persona-info{
+.persona-info {
     position: absolute;
     bottom: 10px;
     width: 100%;
     text-align: center;
-    opacity: 0; 
-    transition: all 0.1s; 
+    opacity: 0;
+    transition: all 0.1s;
 }
 
-.persona:hover .persona-info{
+.persona:hover .persona-info {
     opacity: 1;
     bottom: 60px;
     transition-delay: 0.3s;
 }
 
-.persona-info h2{
+.persona-info h2 {
     font-size: 30px;
     color: black;
     font-weight: 600;
-    text-shadow: 2px 2px 3px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
 }
 
-.persona-info p{
+.persona-info p {
     color: var(--color-secundario);
     font-size: 20px;
     font-weight: 700;
     font-style: italic;
     margin-top: 8px;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 3px rgba(255,0,0,0.5);
+    text-shadow: 2px 2px 3px rgba(255, 0, 0, 0.5);
 }
 
 
-.social-media a{
+.social-media a {
     display: inline-block;
     width: 40px;
     height: 40px;
@@ -415,30 +415,32 @@ body {
     transition: all 0.5s;
 }
 
-.social-media a:hover{
+.social-media a:hover {
     color: var(--color-secundario);
     background: transparent;
     transform: scale(2);
 }
 
 /* SECCION DE CONTACTO */
-#contacto{
+#contacto {
     height: 100vh;
     padding: 60px;
     position: relative;
 }
 
-#formulario{
+#formulario {
     width: 70%;
     margin: 50px auto;
 }
 
-.two-fiels{
+.two-fiels {
     display: flex;
     justify-content: space-between;
 }
 
-.input-text, .input-email, .textarea{
+.input-text,
+.input-email,
+.textarea {
     border: 1px solid #b4b4b4;
     color: grey;
     background: white;
@@ -450,22 +452,23 @@ body {
     transition: all 0.5s;
 }
 
-.textarea{
+.textarea {
     width: 100%;
     height: 150px;
     resize: none;
 }
 
-.input-text, .input-email{
+.input-text,
+.input-email {
     width: 100%;
 }
 
-.inputConIcon{
+.inputConIcon {
     position: relative;
     width: 48%;
 }
 
-.inputConIcon i{
+.inputConIcon i {
     position: absolute;
     left: 0;
     padding: 14px 15px;
@@ -475,19 +478,19 @@ body {
 }
 
 .inputConIcon input:focus,
-.inputConIcon textarea:focus{
-     border: 1px solid var(--color-primario);
+.inputConIcon textarea:focus {
+    border: 1px solid var(--color-primario);
 }
 
-.inputConIcon input:focus + i{
+.inputConIcon input:focus+i {
     background: var(--color-primario);
 }
 
-.textareaIcon{
+.textareaIcon {
     width: 100%;
 }
 
-.textareaIcon i{
+.textareaIcon i {
     background: transparent;
     color: #888;
     padding: 0;
@@ -497,56 +500,108 @@ body {
     transition: all 0.5s;
 }
 
-.inputConIcon textarea:focus + i{
+.inputConIcon textarea:focus+i {
     color: var(--color-primario);
 }
 
-.fiels-btn{
+.fiels-btn {
     width: 100%;
     display: flex;
     justify-content: flex-end;
 }
 
-.btn-input{
+.btn-input {
     padding: 15px 50px;
 }
 
-.btn-input:hover{
+.btn-input:hover {
     padding: 15px 65px;
+}
+
+
+/* FOOTER */
+footer{
+    display: flex;
+    margin-top: -100px;
+}
+
+.sociales-metodo{
+    width: 25%;
+    height: 100px;
+    background: #333;
+    color: #fff;
+    position: relative;
+    text-align: center;
+    overflow: hidden;
+}
+
+.sociales-metodo i{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    line-height: 100px;
+    transition: all 0.5s;
+}
+
+.sociales-metodo span{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    padding: 10px 0;
+    font-size: 12px;
+    background: var(--color-primario);
+    color: #fff;
+    letter-spacing: 1px;
+    font-weight: 700;
+    transform: translateY(60px);
+    transition: all 0.5s;
+}
+
+.sociales-metodo i:hover + span{
+    transform: translateY(0px);
+}
+
+.sociales-metodo i:hover{
+    transform: translateY(-20px);
 }
 
 
 
 
 /* MEDIA QUERYS 850 px*/
-@media screen and (max-width: 850px){
+@media screen and (max-width: 850px) {
+
     /* SLIDER PRODUCTOS */
-    .container-productos{
-         flex-direction: column;
+    .container-productos {
+        flex-direction: column;
     }
 
-    .descripcion-productos{
-         width: 70%;
-         order: 1;
+    .descripcion-productos {
+        width: 70%;
+        order: 1;
     }
 
-    .descripcion-productos .btn{
-         padding: 10px 20px;
+    .descripcion-productos .btn {
+        padding: 10px 20px;
     }
 
-    .descripcion-productos .btn:hover{
-         padding: 10px 30px;
+    .descripcion-productos .btn:hover {
+        padding: 10px 30px;
     }
 
     /*SECCION DE SERVICIOS*/
-    .servicios-container{
+    .servicios-container {
         margin-top: 50px;
         grid-template-columns: repeat(2, 1fr);
         grid-template-areas: "ingredientes    rapidez"
-                             "calidad         entrega";
+            "calidad         entrega";
     }
 
-    .imagen-central{
+    .imagen-central {
         display: none;
     }
 }
@@ -625,5 +680,17 @@ body {
     .descripcion-productos h2 {
         font-size: 3vw;
     }
+
+    
+
+     /* FOOTER */
+     footer{
+        flex-wrap: wrap;
+        margin-top: 0px;
+   }
+
+   .sociales-metodo{
+        width: 50%;
+   }
 
 }
