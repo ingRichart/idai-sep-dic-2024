@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Interactivo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+            max-width: 600px;
+            margin: auto;
+        }
+        .pregunta {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #resultado {
+            margin-top: 20px;
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Quiz de HTML, CSS y JavaScript</h1>
+    <form id="quiz">
+        <div class="pregunta">
+            <p>1. ¿Cuál etiqueta se usa para un enlace en HTML?</p>
+            <label><input type="radio" name="pregunta1" value="a"> < a ></label><br>
+            <label><input type="radio" name="pregunta1" value="b"> < link ></label><br>
+            <label><input type="radio" name="pregunta1" value="c"> < p ></label>
+        </div>
+        <div class="pregunta">
+            <p>2. ¿Qué propiedad CSS se usa para cambiar el color de fondo?</p>
+            <label><input type="radio" name="pregunta2" value="a"> color</label><br>
+            <label><input type="radio" name="pregunta2" value="b"> background-color</label><br>
+            <label><input type="radio" name="pregunta2" value="c"> border-color</label>
+        </div>
+        <div class="pregunta">
+            <p>3. ¿Qué función en JavaScript muestra un mensaje en la consola?</p>
+            <label><input type="radio" name="pregunta3" value="a"> alert()</label><br>
+            <label><input type="radio" name="pregunta3" value="b"> console.log()</label><br>
+            <label><input type="radio" name="pregunta3" value="c"> prompt()</label>
+        </div>
+        <button type="button" id="enviar">Enviar Respuestas</button>
+    </form>
+    <div id="resultado"></div>
+
+    <script>
+        document.getElementById("enviar").addEventListener("click", function() {
+            let puntaje = 0;
+
+            // Validación de la primera pregunta
+            const respuesta1 = document.querySelector('input[name="pregunta1"]:checked');
+            if (respuesta1 && respuesta1.value === "a") {
+                puntaje++;
+            }
+
+            // Validación de la segunda pregunta
+            const respuesta2 = document.querySelector('input[name="pregunta2"]:checked');
+            if (respuesta2 && respuesta2.value === "b") {
+                puntaje++;
+            }
+
+            // Validación de la tercera pregunta
+            const respuesta3 = document.querySelector('input[name="pregunta3"]:checked');
+            if (respuesta3 && respuesta3.value === "b") {
+                puntaje++;
+            }
+
+            // Mostrar resultado
+            const resultadoDiv = document.getElementById("resultado");
+            resultadoDiv.textContent = `Tu puntaje es: ${puntaje} / 3`;
+
+            if (puntaje === 3) {
+                resultadoDiv.textContent += " ¡Excelente trabajo!";
+            } else if (puntaje === 0) {
+                resultadoDiv.textContent += " Sigue practicando.";
+            }
+        });
+    </script>
+</body>
+</html>
